@@ -34,6 +34,7 @@ public class AgenteManager {
             return;
         }
         System.out.println("=== Lista de Agentes ===");
+        System.out.println("=== Agente ===");
         for (Agente agente : agentes) {
             System.out.println(agente);
             System.out.println(" Nivel: "+ agente.getNivel());
