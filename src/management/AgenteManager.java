@@ -24,12 +24,7 @@ public class AgenteManager {
         Agente nuevoAgente = new Agente(id, nombre, habilidad, nivel);
         agentes.add(nuevoAgente);
 
-        System.out.println("El nivel del agente es= "+ nivel);
-        System.out.println("Desea subir su nivel?");
-        System.out.println("Subir nivel de agente?");
-        int subirNivel = ConsoleUtils.leerEntero("ingrese 1 para si y 2 para no: ");
-        if (subirNivel == 1) {
-        }
+
         System.out.println("Agente registrado con éxito.");
     }
 
@@ -41,7 +36,13 @@ public class AgenteManager {
         System.out.println("=== Lista de Agentes ===");
         for (Agente agente : agentes) {
             System.out.println(agente);
-            System.out.print(" Nivel: "+ agente.getNivel());
+            System.out.println(" Nivel: "+ agente.getNivel());
+            System.out.println("Desea subir su nivel?");
+            System.out.println("Subir nivel de agente?");
+            int subirNivel = ConsoleUtils.leerEntero("ingrese 1 para si y 2 para no: ");
+            if (subirNivel == 1) {
+                agente.subirNivel(agente);
+            }
         }
     }
     
